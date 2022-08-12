@@ -5,6 +5,7 @@ metadata:
   namespace: todo
   annotations:
     argocd.argoproj.io/sync-wave: "1"
+    super-job: "simple"
 spec:
   template:
     spec:
@@ -15,8 +16,6 @@ spec:
           env:
             - name: PGPASSWORD
               value: admin
-            - name: test
-              value: simple
           command: ["psql"]
           args:
             [
