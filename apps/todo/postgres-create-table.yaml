@@ -15,6 +15,8 @@ spec:
           env:
             - name: PGPASSWORD
               value: admin
+            - name: test
+              value: simple
           command: ["psql"]
           args:
             [
